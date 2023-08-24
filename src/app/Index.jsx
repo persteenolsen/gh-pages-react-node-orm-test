@@ -43,7 +43,7 @@ function App() {
                 <PrivateRoute path="/admin" roles={[Role.Admin]} component={Admin} />
                 
                 
-                <Route path="/gh-pages-react-node-orm-test/account" component={Account} />
+                <Route path="/gh-pages-react-node-orm-test/account/*" component={Account} />
                                
                 <Route exact path="/gh-pages-react-node-orm-test" component={AboutPage} />
                 <Route exact path="/about" component={AboutPage} />
