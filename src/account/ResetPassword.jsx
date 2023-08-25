@@ -24,7 +24,7 @@ function ResetPassword({ history }) {
        // const { token } = searchParams.get('token');
         
        
-       let tokenS  = "0cb78836769c651040d2fb66e3df912bd7657c64c7d62d7247571079cb426b03f5b5e45f83d37deb";  
+       let token  = "0cb78836769c651040d2fb66e3df912bd7657c64c7d62d7247571079cb426b03f5b5e45f83d37deb";  
       // let token = parseInt(tokenS);
 	  
         // TEST
