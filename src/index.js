@@ -40,7 +40,7 @@ function startApp() {
 
 // Note: Needed to be disabled for GH Pages !
 //if (module.hot) {
- // module.hot.accept();
+//  module.hot.accept();
 // }
 
 
