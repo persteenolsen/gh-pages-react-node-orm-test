@@ -17,8 +17,10 @@ function ResetPassword({ history }) {
     const [tokenStatus, setTokenStatus] = useState(TokenStatus.Validating);
 
     useEffect(() => {
-        const { token } = queryString.parse(location.search);
-        
+        //const { token } = queryString.parse(location.search);
+        const { token } = new URLSearchParams(this.props.location.search);
+
+       
         // TEST
         alert('Token: ' + token);
         alert('Path: ' + location.pathname);
