@@ -87,6 +87,7 @@ function forgotPassword(email) {
 }
 
 function validateResetToken(token) {
+    alert('Token: ' + token);
     return fetchWrapper.post(`${baseUrl}/validate-reset-token`, { token });
 }
 

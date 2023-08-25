@@ -32,7 +32,8 @@ function ResetPassword({ history }) {
         alert('Path: ' + location.pathname);
 
         // remove token from url to prevent http referer leakage
-        history.replace(location.pathname);
+       // history.replace(location.pathname);
+       // history.replace(location.pathname);
 
         accountService.validateResetToken(token)
             .then(() => {
