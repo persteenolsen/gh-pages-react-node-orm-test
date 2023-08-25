@@ -45,7 +45,7 @@ function App() {
                 <Route path="/account" component={Account} />
                  
                 
-                <Route path="/gh-pages-react-node-orm-test/yyy" component={MyInfoPage} />
+                <Route path="/gh-pages-react-node-orm-test/yyy/*" component={MyInfoPage} />
                
                   
 
