@@ -27,9 +27,9 @@ startApp();
  // HashRouter is needed for browser refresh / 404
 function startApp() { 
     render(
-         <Router history={history}>
+         <HashRouter basename='/'>
             <App />
-          </Router>,
+          </HashRouter>,
         document.getElementById('app')
     );
 }
