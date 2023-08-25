@@ -17,24 +17,26 @@ function ResetPassword({ history }) {
     const [tokenStatus, setTokenStatus] = useState(TokenStatus.Validating);
 
     useEffect(() => {
+        // TEST - does not work
         //const { token } = queryString.parse(location.search);
        
-        // const location = useLocation();
+        // TEST - does not work
+       // const location = useLocation();
        // const searchParams = new URLSearchParams(location.search);
        // const { token } = searchParams.get('token');
         
-       
-       let token  = "0cb78836769c651040d2fb66e3df912bd7657c64c7d62d7247571079cb426b03f5b5e45f83d37deb";  
+       // TEST - simulation works
+       let token  = "a333ed43df7039a9cec04302970ba872685ce2f54837e3d63138fc58ce204ed15b3142525a1c983a";  
       // let token = parseInt(tokenS);
 	  
         // TEST
         alert('Token: ' + token);
         alert('Path: ' + location.pathname);
-
+        
         // remove token from url to prevent http referer leakage
-       // history.replace(location.pathname);
-       // history.replace(location.pathname);
-
+        // TEST - simulation works
+        // history.replace(location.pathname);
+       
         accountService.validateResetToken(token)
             .then(() => {
                 setToken(token);
