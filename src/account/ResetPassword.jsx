@@ -18,9 +18,8 @@ function ResetPassword({ history }) {
 
     useEffect(() => {
         //const { token } = queryString.parse(location.search);
-        const { token } = new URLSearchParams(this.props.location.search);
+       const { token } = "0cb78836769c651040d2fb66e3df912bd7657c64c7d62d7247571079cb426b03f5b5e45f83d37deb";  
 
-       
         // TEST
         alert('Token: ' + token);
         alert('Path: ' + location.pathname);

@@ -27,7 +27,7 @@ startApp();
  // HashRouter is needed for browser refresh / 404
 function startApp() { 
     render(
-         <HashRouter basename='/gh-pages-react-node-orm-test'>
+         <HashRouter basename='/'>
             <App />
           </HashRouter>,
         document.getElementById('app')
