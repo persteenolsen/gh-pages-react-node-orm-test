@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import queryString from 'query-string';
 import { Formik, Field, Form, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
@@ -18,7 +18,11 @@ function ResetPassword({ history }) {
 
     useEffect(() => {
         //const { token } = queryString.parse(location.search);
-       const { token } = "0cb78836769c651040d2fb66e3df912bd7657c64c7d62d7247571079cb426b03f5b5e45f83d37deb";  
+        const location = useLocation()
+        const searchParams = new URLSearchParams(location.search)
+        const { token } = searchParams.get('token')
+
+       // const { token } = "0cb78836769c651040d2fb66e3df912bd7657c64c7d62d7247571079cb426b03f5b5e45f83d37deb";  
 
         // TEST
         alert('Token: ' + token);
