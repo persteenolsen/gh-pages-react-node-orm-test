@@ -87,7 +87,8 @@ function forgotPassword(email) {
 }
 
 function validateResetToken(token) {
-    alert('Token: ' + token);
+    // TEST - GH PAGES
+    // alert('Token: ' + token);
     return fetchWrapper.post(`${baseUrl}/validate-reset-token`, { token });
 }
 

@@ -7,6 +7,7 @@ import * as Yup from 'yup';
 import { accountService, alertService } from '@/_services';
 
 function ResetPassword({ history }) {
+
     const TokenStatus = {
         Validating: 'Validating',
         Valid: 'Valid',
@@ -17,25 +18,33 @@ function ResetPassword({ history }) {
     const [tokenStatus, setTokenStatus] = useState(TokenStatus.Validating);
 
     useEffect(() => {
-        // TEST - does not work
-        //const { token } = queryString.parse(location.search);
-       
-        // TEST - does not work
-       // const location = useLocation();
-       // const searchParams = new URLSearchParams(location.search);
-       // const { token } = searchParams.get('token');
-        
+       				 
+      // const { token } = queryString.parse(location.search);
+	 
+	  var url_string =  '' + location;
+	  alert(url_string);
+	  	
+	 // var url_string = "http://localhost:8080/#/account/reset-password?token=a333ed43df7039a9cec04302970ba872685ce2f54837e3d63138fc58ce204ed15b3142525a1c983a";
+	 
+	 url_string = url_string.replace("#","");
+     var url = new URL(url_string);
+     var token = url.searchParams.get("token");
+		   
        // TEST - simulation works
-       let token  = "a333ed43df7039a9cec04302970ba872685ce2f54837e3d63138fc58ce204ed15b3142525a1c983a";  
+      // let token  = "a333ed43df7039a9cec04302970ba872685ce2f54837e3d63138fc58ce204ed15b3142525a1c983a";  
       // let token = parseInt(tokenS);
-	  
+		
         // TEST
         alert('Token: ' + token);
-        alert('Path: ' + location.pathname);
+        alert('Path: ' + location.pathname + '/account/reset-password' );
         
         // remove token from url to prevent http referer leakage
-        // TEST - simulation works
+        // TEST - simulation works without this
         // history.replace(location.pathname);
+		//history.replace( '/account/reset-password' ); 
+		
+		history.replace( '/gh-pages-react-node-orm-test/account/reset-password' ); 
+		//history.replace( location.pathname + '/account/reset-password' ); 
        
         accountService.validateResetToken(token)
             .then(() => {
