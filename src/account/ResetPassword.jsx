@@ -43,7 +43,7 @@ function ResetPassword({ history }) {
         // history.replace(location.pathname);
 		//history.replace( '/account/reset-password' ); 
 		
-		history.replace( '/gh-pages-react-node-orm-test/account/reset-password' ); 
+		history.replace( '/account/reset-password' ); 
 		//history.replace( location.pathname + '/account/reset-password' ); 
        
         accountService.validateResetToken(token)
