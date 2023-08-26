@@ -19,33 +19,24 @@ function ResetPassword({ history }) {
 
     useEffect(() => {
        				 
-      // const { token } = queryString.parse(location.search);
-	 
-	  var url_string =  '' + location;
-	  
-      // alert(url_string);
-	  	
-	   // var url_string = "http://localhost:8080/#/account/reset-password?token=a333ed43df7039a9cec04302970ba872685ce2f54837e3d63138fc58ce204ed15b3142525a1c983a";
-	 
+        // const { token } = queryString.parse(location.search);
+	 	  	  	  	
+	    // var url_string = "http://localhost:8080/#/account/reset-password?token=a333ed43df7039a9cec04302970ba872685ce2f54837e3d63138fc58ce204ed15b3142525a1c983a";
+        
+        var url_string =  '' + location;
 	    url_string = url_string.replace("#","");
         var url = new URL(url_string);
         var token = url.searchParams.get("token");
 		   
         // TEST - simulation works
-       // let token  = "a333ed43df7039a9cec04302970ba872685ce2f54837e3d63138fc58ce204ed15b3142525a1c983a";  
-       // let token = parseInt(tokenS);
-		
-        // TEST
-        //alert('Token: ' + token);
-        //alert('Path: ' + location.pathname + '/account/reset-password' );
-        
+        // let token  = "a333ed43df7039a9cec04302970ba872685ce2f54837e3d63138fc58ce204ed15b3142525a1c983a";  
+        // let token = parseInt(tokenS);
+		//alert('Token: ' + token);
+                
         // remove token from url to prevent http referer leakage
         // TEST - simulation works without this
         // history.replace(location.pathname);
-		//history.replace( '/account/reset-password' ); 
-		
-		history.replace( '/account/reset-password' ); 
-		//history.replace( location.pathname + '/account/reset-password' ); 
+		history.replace( '/account/reset-password' );  
        
         accountService.validateResetToken(token)
             .then(() => {

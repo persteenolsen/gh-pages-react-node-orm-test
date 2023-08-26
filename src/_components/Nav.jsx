@@ -30,6 +30,7 @@ function Nav() {
                        <NavLink to="/about" className="nav-item nav-link">About this Application</NavLink>
 					   <NavLink to="/persteenolsen" className="nav-item nav-link">Per Steen Olsen</NavLink>
 					   
+					   <NavLink to="/account/forgot-password" className="nav-item nav-link">Forgot Password</NavLink>
 					   <NavLink to="/account/login" className="nav-item nav-link">Login</NavLink>
                  
                   </div>

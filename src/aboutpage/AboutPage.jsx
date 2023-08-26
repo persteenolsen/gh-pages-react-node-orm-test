@@ -32,12 +32,12 @@ class AboutPage extends React.Component {
 
 			   <b>Last updated:</b>
 			   <ul>
-				  <li>24-08-2023</li>
+				  <li>26-08-2023</li>
 			   </ul>
 
 			   <b>GitHub</b>
 			   <ul>
-			     <li><a href="https://github.com/persteenolsen/gh-pages-react-node-orm-client" target="_blank">The React SPA Client - The frontend</a></li>
+			     <li><a href="https://github.com/persteenolsen/gh-pages-react-node-orm-test" target="_blank">The React SPA Client - The frontend</a></li>
 				 <li><a href="https://github.com/persteenolsen/node-express-sequelize-users-api-basic" target="_blank">The Web API - The backend</a></li>
 			   </ul>
               	
