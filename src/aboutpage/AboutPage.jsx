@@ -32,7 +32,7 @@ class AboutPage extends React.Component {
 
 			   <b>Last updated:</b>
 			   <ul>
-				  <li>26-08-2023</li>
+				  <li>27-08-2023</li>
 			   </ul>
 
 			   <b>GitHub</b>
@@ -50,8 +50,10 @@ class AboutPage extends React.Component {
 
 			   <b>Main functionality of Users</b>
 			   <ul>
-			    <li>Upgraded from Node 12.16 to Node 14.17</li>
+			   <li>Upgraded from Node 12.16 to Node 14.17</li>
+			    <li>Users are able to register an account and after verify the email, the users will be able to login to the system</li>
 			    <li>After a successfully login the users can update own profiles</li>
+			    <li>The users can receive new passwords by the forgot password functionality by reseting their password before a given time like 24 hours</li>
 			    </ul>
 			  
 			   <b>Main functionality of Administrators</b>
@@ -85,7 +87,7 @@ class AboutPage extends React.Component {
 	            <li>Manuel configuration of the Webpack 4 serving as a module bundler</li>
 			    <li>Babel for transpiling JavaScript React ES6 to JavaScript ES5 ready for browsers</li>
 			    <li>React BrowserRouter for navigation</li>
-                <li>Hosted at a traditional Webhotel as a ES5 bundle and a index.html loading the Bootstrap by CDN</li>
+                <li>Hosted at GH Pages</li>
               </ul>
           
 		      <b>Technology, structure and hosting used for the Node.js Web API - The backend</b>  
