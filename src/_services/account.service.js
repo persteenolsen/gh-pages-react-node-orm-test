@@ -82,8 +82,9 @@ function verifyEmail(token) {
     return fetchWrapper.post(`${baseUrl}/verify-email`, { token });
 }
 
+// GH Pages
 function forgotPassword(email) {
-    return fetchWrapper.post(`${baseUrl}/forgot-password`, { email });
+    return fetchWrapper.post(`${baseUrl}/forgot-password-gh-pages`, { email });
 }
 
 function validateResetToken(token) {
