@@ -58,6 +58,7 @@ function login(email, password) {
 }
 
 // NOTE: No use of the RefreshToken in this React Client !
+// GH PAGES
 function logout() {
 	
 	 // Note: Remove user from local storage and publish null to user subject
@@ -74,8 +75,9 @@ function logout() {
 	
 }
 
+// GH Pages
 function register(params) {
-    return fetchWrapper.post(`${baseUrl}/register`, params);
+    return fetchWrapper.post(`${baseUrl}/register-gh-pages`, params);
 }
 
 function verifyEmail(token) {
@@ -87,6 +89,7 @@ function forgotPassword(email) {
     return fetchWrapper.post(`${baseUrl}/forgot-password-gh-pages`, { email });
 }
 
+// TEST - GH PAGES
 function validateResetToken(token) {
     // TEST - GH PAGES
     // alert('Token: ' + token);
