@@ -44,6 +44,7 @@ function App() {
                 
                 <Route path="/account" component={Account} />
                 
+                <Route exact path="/gh-pages-react-node-orm-test" component={AboutPage} />
                 <Route exact path="/foo" component={AboutPage} />
 
                 <Route exact path="/about" component={AboutPage} />
